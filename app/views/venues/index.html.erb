@@ -15,12 +15,12 @@
         <th>Actions</th>
       </tr>
 
-      <% @venues.each do |venue| %>
+      <% @neighborhood.venues.each do |venue| %>
       <tr>
         <td><%= venue.name %></td>
         <td><%= venue.address %></td>
         <td><%= venue.neighborhood.name %></td>
-       
+      
         <td>
           <a href="/venues/<%= venue.id %>" class="btn btn-primary">Show</a>
           <a href="/venues/<%= venue.id %>/edit" class="btn btn-warning">Edit</a>
@@ -30,4 +30,4 @@
       <% end %>
     </table>
   </div>
-</div>
+
