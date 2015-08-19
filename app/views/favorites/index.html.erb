@@ -16,19 +16,25 @@
         <th>Actions</th>
       </tr>
 
-      <% @favorites.each do |favorite| %>
+
+    
       <tr>
-        <td><%= favorite.user_id %></td>
-        <td><%= favorite.dish_id %></td>
-        <td><%= favorite.venue_id %></td>
+      <% @favorites.each do |favorite| %>
+      <td><%= favorite.user.username %></td>
+      
+
+        
+        
+        
         <td><%= favorite.notes %></td>
+        </tr>
+
         <td>
           <a href="/favorites/<%= favorite.id %>" class="btn btn-primary">Show</a>
           <a href="/favorites/<%= favorite.id %>/edit" class="btn btn-warning">Edit</a>
           <a href="/delete_favorite/<%= favorite.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
         </td>
-      </tr>
+</table>
       <% end %>
-    </table>
-  </div>
-</div>
+ 
+ 

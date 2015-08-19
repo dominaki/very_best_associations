@@ -5,6 +5,9 @@ class VenuesController < ApplicationController
 
   def show
     @venue = Venue.find(params[:id])
+    @venue.name = params[:name]
+    @venue.address = params[:address]
+    @venue.neighborhood_id = params[:neighborhood_id]
   end
 
   def new
