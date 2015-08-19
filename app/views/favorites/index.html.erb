@@ -21,12 +21,9 @@
       <tr>
       <% @favorites.each do |favorite| %>
       <td><%= favorite.user.username %></td>
-      
-
-        
-        
-        
-        <td><%= favorite.notes %></td>
+      <td><%= favorite.dish.name %></td>
+      <td><%= favorite.venue.name %></td>
+      <td><%= favorite.notes %></td>
         </tr>
 
         <td>

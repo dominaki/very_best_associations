@@ -15,10 +15,11 @@
         <th>Actions</th>
       </tr>
 
-      <% @neighborhood.venues.each do |venue| %>
+      <% @venues.each do |venue| %>
       <tr>
         <td><%= venue.name %></td>
         <td><%= venue.address %></td>
+        
         <td><%= venue.neighborhood.name %></td>
       
         <td>
