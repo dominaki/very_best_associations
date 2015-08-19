@@ -15,7 +15,7 @@ class DishesController < ApplicationController
     @dish = Dish.new
     @dish.name = params[:name]
     @dish.cuisine_id = params[:cuisine_id]
-
+  
     if @dish.save
       redirect_to "/dishes", :notice => "Dish created successfully."
     else
